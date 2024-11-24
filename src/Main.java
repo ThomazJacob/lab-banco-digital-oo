@@ -8,6 +8,10 @@ public class Main {
 		Conta cc = new ContaCorrente(venilton);
 		Conta poupanca = new ContaPoupanca(venilton);
 
+		Banco bancoDBanco = new Banco("Banco de Teste");
+		bancoDBanco.adicionaConta(poupanca);
+		bancoDBanco.adicionaConta(cc);
+
 		cc.depositar(100);
 		cc.transferir(100, poupanca);
 		

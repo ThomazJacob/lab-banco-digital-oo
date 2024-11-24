@@ -4,6 +4,10 @@ public class Banco {
 
 	private String nome;
 	private List<Conta> contas;
+	
+	public Banco(String nome) {
+		this.nome = nome;
+	}
 
 	public String getNome() {
 		return nome;
@@ -19,6 +23,11 @@ public class Banco {
 
 	public void setContas(List<Conta> contas) {
 		this.contas = contas;
+	}
+
+	public void adicionaConta(Conta novaConta){
+		// Função para adicionar nova conta ao banco
+		this.contas.addLast(novaConta);
 	}
 
 }
